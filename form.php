@@ -39,7 +39,7 @@
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
                     <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
                     <li><a href="./contact.php">Contact</a></li>
-                    <li><a href="Prices.html">Prices</a></li>
+                    <li><a href="./Prices.php">Prices</a></li>
                 </ul>
             </nav>
             <span class="search-icon">

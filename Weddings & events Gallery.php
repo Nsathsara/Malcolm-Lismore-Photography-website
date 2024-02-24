@@ -31,9 +31,9 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
-                    <li><a href="weddings & events gallery.html" class="active">Weddings & Events Gallery</a></li>
-                    <li><a href="./contact.php">Contact</a></li>
-                    <li><a href="./Prices.html">Prices</a></li>
+                    <li><a href="weddings & events gallery.php" class="active">Weddings & Events Gallery</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="Prices.php">Prices</a></li>
                 </ul>
             </nav>
             <span class="search-icon">
@@ -82,19 +82,18 @@
             <div class="weddings-gallery">
 
                 <?php
-                // Assuming $conn is your database connection
+
                 include "./db/db.php";
 
-                // Query to retrieve photo paths from the database
-                $query = "SELECT path FROM `file`"; // Assuming your table is named `file`
+
+                $query = "SELECT path FROM `file`"; 
                 $result = $conn->query($query);
 
                 if ($result->num_rows > 0) {
-                    // Loop through each row in the result set
+
                     while ($row = $result->fetch_assoc()) {
                         $photoPath = $row["path"];
-                        // Display the photo using an <img> tag
-                        // echo "<img src='$photoPath' alt='Photo'>";
+
 
                         echo "
                         <div class='single-img'>

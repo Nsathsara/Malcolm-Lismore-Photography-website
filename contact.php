@@ -36,7 +36,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
-                    <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
+                    <li><a href="weddings & events gallery.php">Weddings & Events Gallery</a></li>
                     <li><a href="./Contact.php" class="active">Contact</a></li>
                     <li><a href="./Prices.php">Prices</a></li>
                 </ul>
@@ -152,15 +152,16 @@
 
             
             <div class="contact-bottom">
-                <span><?php echo $name  ?></span>
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class = "form">
-                    <input type="text" name="name" id="name" placeholder="Your Name" >
-                    <input type="email" name="email" id="email" placeholder="Your Email">
-                    <input type="text" name="subject" id="subject" placeholder="Subject">
-                    <textarea rows = "9" name="message" id="message" placeholder="Message"></textarea>
-                    <button class='btn' name='submit' type='submit'>submit</button>
-                </form>
-
+                <div class = "contact-form">
+                    <span><?php echo $name  ?></span>
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class = "form">
+                       <input type="text" name="name" id="name" placeholder="Your Name" >
+                       <input type="email" name="email" id="email" placeholder="Your Email">
+                       <input type="text" name="subject" id="subject" placeholder="Subject">
+                       <textarea rows = "9" name="message" id="message" placeholder="Message"></textarea>
+                       <button class='btn' name='submit' type='submit'>submit</button>
+                    </form>
+                </div>
                 <!--map-->
                 <div>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6539399.485787481!2d-129.3826449631014!3d36.84

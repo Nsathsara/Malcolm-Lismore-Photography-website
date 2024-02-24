@@ -552,7 +552,12 @@ blockquote span{
 }
 .contact-bottom .form{
     padding: 0 20px;
+ 
 }
+.contact-form{
+    margin-right: 300px;
+}
+
 
 /**************************************about styling******************************************/
 
