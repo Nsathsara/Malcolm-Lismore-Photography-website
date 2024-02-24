@@ -1,3 +1,10 @@
+<?php 
+
+    include "./db/db.php";
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,12 +34,12 @@
             <!--navgation menu-->
             <nav class="top-nav">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
                     <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
-                    <li><a href="Contact.html">Contact</a></li>
-                    <li><a href="Prices.html" class="active">Prices</a></li>
+                    <li><a href="./contact.php">Contact</a></li>
+                    <li><a href="Prices.html">Prices</a></li>
                 </ul>
             </nav>
             <span class="search-icon">
@@ -75,7 +82,48 @@
     </header>
     <!--end of header-->
 
+
+
+    <?php 
+
+                $type = $_POST['data'];
+
+                $_SESSION['type'] = $type;
+
+                $errors = "";
+                if(isset($_POST['submit'])){
+
+                    $fname = $_POST['fname'];
+                    $lname = $_POST['lname'];
+                    $email = $_POST['email'];
+                    $type = $_SESSION['type'];
+
+                    $qur = "INSERT INTO order VALUES(0, '$fname', '$lname', '$email', '$type');";
+
+                    $result = $conn -> query($qur);
+
+                    if($result === TRUE) {
+                        $errors = "successfuly added";
+                    }else{
+                        $errors =  "Unsuccess";
+                    }
+                }
+            
+                echo $errors;
+            ?>
+
     <!--main-->
+    <div class="form">
+      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname"><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname">
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email">
+          <input class="form-btn" type="submit" name="submit"/>
+        </form>
+    </div>
 
     <!--end of main-->
 

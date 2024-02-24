@@ -31,8 +31,8 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
                     <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
-                    <li><a href="Contact.html" class="active">Contact</a></li>
-                    <li><a href="Prices.html">Prices</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="Prices.html" class="active">Prices</a></li>
                 </ul>
             </nav>
             <span class="search-icon">
@@ -76,66 +76,52 @@
     <!--end of header-->
 
     <!--main-->
-    <section class="section-five">
-        <div class="container">
-            <div class="contact-top">
-                <h3>CONTACT ME</h3>
-                <p>Feel free to reach out to me via the contact form provided below or directly through my email or phone number, 
-                as I eagerly await the opportunity to connect with you and discuss how my photography services can bring your vision to life.</p>
-            </div>
 
-            <div class="contact-middle">
-                <div>
-                     <span class="contact-icon">
-                         <i class="fas fa-map-signs"></i>
-                     </span>
-                     <span>Address</span>
-                     <p>Main Street - 2356, California 0043</p>
+    <section class="pricing">
+        <h1 class="heading">Pricing</h1>
+        <div class="= box-container">
+            <div class="box">
+                <div class="box-2">
+                    <h3>basic plane</h3>
                 </div>
-
-                <div>
-                    <span class="contact-icon">
-                         <i class="fas fa-phone"></i>
-                    </span>
-                    <span>Contact Number</span>
-                    <p>2455 0645 2573</p>
+                <div class="price">$250/-</div>
+                <div class="list">
+                    <p><i class="fas fa-check"></i>photography</p>
+                    <p><i class="fas fa-check"></i>1 Location</p>
+                    <p><i class="fas fa-check"></i>3 Hovers</p>
+                    <p><i class="fas fa-check"></i>Digital Files Included</p>
                 </div>
-
-               <div>
-                    <span class="contact-icon">
-                         <i class="fas fa-paper-plane"></i>
-                    </span>
-                    <span>Email</span>
-                    <p>malcolmlismore@gmail.com</p>
-                </div>
-
-                <div>
-                    <span class="contact-icon">
-                         <i class="fas fa-globe"></i>
-                    </span>
-                    <span>Website</span>
-                    <p>www.malcolmlismorephotography.com</p>
-                </div>
-            </div>
-            
-            <div class="contact-bottom">
-                <form class = "form">
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
-                    <input type="text" placeholder="Subject">
-                    <textarea rows = "9" placeholder="Message"></textarea>
-                    <input type="submit" class="btn" value="Send Message">
+                    <!-- <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=basic">Choose plan</a> -->
+                <form method="post" action="form.php">
+                    <input type="hidden" name="data" value="basic">
+                    <button type="submit">Send Data</button>
                 </form>
+                                    
 
-                <!--map-->
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6539399.485787481!2d-129.3826449631014!3d36.84
-                    089164187813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCaliforn
-                    ia%2C%20USA!5e0!3m2!1sen!2slk!4v1708686590693!5m2!1sen!2slk" width="100%" height="600px" style="border:0;"
-                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
+            <div class="box">
+                <h3>premium plane</h3>
+                <div class="price">$500/-</div>
+                <div class="list">
+                    <p><i class="fas fa-check"></i>photography</p>
+                    <p><i class="fas fa-check"></i>3 Location</p>
+                    <p><i class="fas fa-check"></i>6 Hovers</p>
+                    <p><i class="fas fa-check"></i>Digital Files Included</p>
                 </div>
-                
+                <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=premium">Choose plan</a>            
+            </div>
+
+            <div class="box">
+                <h3>ultimate plane</h3>
+                <div class="price">$750/-</div>
+                <div class="list">
+                    <p><i class="fas fa-check"></i>photography</p>
+                    <p><i class="fas fa-check"></i>Multiple Location</p>
+                    <p><i class="fas fa-check"></i>9 Hovers</p>
+                    <p><i class="fas fa-check"></i>Digital Files Included</p>
+                </div>
+                <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=ultimate">Choose plan</a>
             </div>
         </div>
     </section>

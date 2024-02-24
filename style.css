@@ -377,8 +377,123 @@ blockquote span{
 
 /**********************end of Nature.html********************************/
 
+/************************************price.html**************************************/
+.pricing .box-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-left: 100px;
+    margin-bottom: 75px;
+}
+.pricing .box-container .box{
+    align-items: center;
+    border-radius: .5rem;
+    background: var(--transparent-white);
+    box-shadow: var(--box-shadow);
+    background-color: #82ea89;
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    width: 350px;
+    padding-bottom: 20px;
+}
 
+.plan-btn{
+    background: var(--darkGreen);
+    border: none;
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: var(--darkGreen);
+    text-transform: uppercase;
+    background: transparent;
+    font-size: 15px;
+    padding: 12px;
+    border: 2px solid var(--darkGreen);
+    border-radius: 25px;
+    margin: 15px o;
+    transition: var(--darkGreen);
+}
 
+.plan-btn:hover {
+    background: var(--dark);
+    border: none;
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px;
+    border: 2px solid var(--dark);
+    border-radius: 25px;
+    margin: 15px o;
+    transition: var(--dark);
+}
+
+.box-2 h3{
+    color: #5c8823;
+    
+
+}
+
+.price{
+    font-size: 27px;
+}
+
+.heading{
+    text-align: center;
+    font-weight: 600;
+    font-size: 40px;
+}
+
+/********************************form.html*************************************/
+.form{
+    border: #000;
+    width: 400px;
+    background-color: #d3fa9e;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 550px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 2rem;
+
+}
+.form-btn{
+    background: var(--darkGreen);
+    border: none;
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: var(--darkGreen);
+    text-transform: uppercase;
+    background: transparent;
+    font-size: 15px;
+    padding: 12px;
+    border: 2px solid var(--darkGreen);
+    border-radius: 25px;
+    margin: 15px o;
+    transition: var(--darkGreen)
+}
+
+.form-btn:hover {
+    background: var(--dark);
+    border: none;
+    display: block;
+    width: 150px;
+    text-align: center;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px;
+    border: 2px solid var(--dark);
+    border-radius: 25px;
+    margin: 15px o;
+    transition: var(--dark);
+}
 
 /*******************************contact.html**************************************/
 

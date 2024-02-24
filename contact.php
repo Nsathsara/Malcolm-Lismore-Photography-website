@@ -1,3 +1,9 @@
+<?php 
+
+    include "./db/db.php"
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,10 +34,10 @@
             <nav class="top-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
                     <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="Contact.php" class="active">Contact</a></li>
                     <li><a href="Prices.html">Prices</a></li>
                 </ul>
             </nav>
@@ -76,60 +82,97 @@
     <!--end of header-->
 
     <!--main-->
-    <div class="about">
+    <section class="section-five">
         <div class="container">
-            <div class="about-top">
-                <h3>ABOUT ME</h3>
+            <div class="contact-top">
+                <h3>CONTACT ME</h3>
+                <p>Feel free to reach out to me via the contact form provided below or directly through my email or phone number, 
+                as I eagerly await the opportunity to connect with you and discuss how my photography services can bring your vision to life.</p>
             </div>
 
-            <div class="counter">
-                <div class="box">
-                    <span>5+</span>
-                    <h3>Years of Experience</h3>
+            <div class="contact-middle">
+                <div>
+                     <span class="contact-icon">
+                         <i class="fas fa-map-signs"></i>
+                     </span>
+                     <span>Address</span>
+                     <p>Main Street - 2356, California 0043</p>
                 </div>
 
-                <div class="box">
-                    <span>300+</span>
-                    <h3>Project completed</h3>
+                <div>
+                    <span class="contact-icon">
+                         <i class="fas fa-phone"></i>
+                    </span>
+                    <span>Contact Number</span>
+                    <p>2455 0645 2573</p>
                 </div>
 
-                <div class="box">
-                    <span>500+</span>
-                    <h3>Happy clients</h3>
+               <div>
+                    <span class="contact-icon">
+                         <i class="fas fa-paper-plane"></i>
+                    </span>
+                    <span>Email</span>
+                    <p>malcolmlismore@gmail.com</p>
                 </div>
 
-                <div class="box">
-                    <span>10+</span>
-                    <h3>Awards won</h3>
+                <div>
+                    <span class="contact-icon">
+                         <i class="fas fa-globe"></i>
+                    </span>
+                    <span>Website</span>
+                    <p>www.malcolmlismorephotography.com</p>
                 </div>
             </div>
 
-            <div class="about-para">
-                <p> Welcome to Malcolm Lismore Photography, where passion meets purpose in every click of the shutter. Based on the captivating 
-                    North West coast of Scotland, I am Malcolm Lismore, a freelance photographer deeply devoted to capturing the raw beauty of 
-                    the natural world. With a keen eye for detail and an unwavering love for the rugged Scottish landscape, my lens transforms 
-                    fleeting moments into timeless works of art.
+            <?php 
 
-                    My journey in photography began with a profound appreciation for the intricate patterns of nature and the majestic allure 
-                    of wildlife. Over the years, this passion has evolved, allowing me to specialize not only in landscape and wildlife photography 
-                    but also in capturing the cherished moments of weddings, portraits, and special events.
-                    
-                    Through my lens, I strive to convey the profound connection between humanity and the natural world, inviting viewers to
-                     immerse themselves in the rich tapestry of our surroundings. With each photograph, I aim to evoke emotions, ignite imaginations, 
-                     and inspire a deeper appreciation for the beauty that surrounds us.
-                    
-                    Beyond photography, I am committed to providing exceptional service to my clients, ensuring that every interaction is met with 
-                    professionalism, integrity, and a genuine desire to exceed expectations. Whether you're seeking to adorn your walls with the 
-                    breathtaking vistas of Scotland or to immortalize the cherished moments of your special day, 
-                    I am dedicated to turning your vision into reality.
-                    
-                    Thank you for visiting Malcolm Lismore Photography. I invite you to explore my portfolio, 
-                    discover the beauty of the world through my lens, and embark on a journey of visual storytelling unlike any other.</p>
+                $errors = "";
+                $name = "";
+            
+                if(isset($_POST['submit'])){
+
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $subject = $_POST['subject'];
+                    $message = $_POST['message'];
+
+                    $qur = "INSERT INTO messages VALUES(0, '$name', '$email', '$subject', '$message');";
+
+                    $result = $conn -> query($qur);
+
+                    if($result === TRUE) {
+                        $errors = "successfuly added";
+                    }else{
+                        $errors =  "Unsuccess";
+                    }
+                }
+            
+                echo $errors;
+            ?>
+
+            
+            <div class="contact-bottom">
+                <span><?php echo $name  ?></span>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" class = "form">
+                    <input type="text" name="name" id="name" placeholder="Your Name" >
+                    <input type="email" name="email" id="email" placeholder="Your Email">
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea rows = "9" name="message" id="message" placeholder="Message"></textarea>
+                    <button class='btn' name='submit' type='submit'>submit</button>
+                </form>
+
+                <!--map-->
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6539399.485787481!2d-129.3826449631014!3d36.84
+                    089164187813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCaliforn
+                    ia%2C%20USA!5e0!3m2!1sen!2slk!4v1708686590693!5m2!1sen!2slk" width="100%" height="600px" style="border:0;"
+                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+                
             </div>
-
         </div>
-    </div>
-
+    </section>
 
     <!--end of main-->
 
@@ -138,6 +181,11 @@
         <div class="footer-container container">
             <div>
                 <h2>Malcolm lismore</h2>
+                <?php 
+
+                    echo "connected";
+                
+                ?>
                 <p>"To me, photography is an art of observation. It's about finding something interesting in an ordinary place...
                 I've found it has little to do with the things you see and everything to do with the way you see them."</p>
             </div>
