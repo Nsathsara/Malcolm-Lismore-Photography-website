@@ -37,8 +37,8 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
                     <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
-                    <li><a href="Contact.php" class="active">Contact</a></li>
-                    <li><a href="Prices.html">Prices</a></li>
+                    <li><a href="./Contact.php" class="active">Contact</a></li>
+                    <li><a href="./Prices.php">Prices</a></li>
                 </ul>
             </nav>
             <span class="search-icon">

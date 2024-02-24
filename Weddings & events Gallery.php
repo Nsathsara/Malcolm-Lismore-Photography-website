@@ -1,10 +1,3 @@
-<?php 
-
-    include "./db/db.php";
-    session_start();
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +7,7 @@
     <mata name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="simplelightbox-master/dist/simple-lightbox.css">
 
 </head>
 <body>
@@ -34,12 +28,12 @@
             <!--navgation menu-->
             <nav class="top-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
-                    <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
+                    <li><a href="weddings & events gallery.html" class="active">Weddings & Events Gallery</a></li>
                     <li><a href="./contact.php">Contact</a></li>
-                    <li><a href="Prices.html">Prices</a></li>
+                    <li><a href="./Prices.html">Prices</a></li>
                 </ul>
             </nav>
             <span class="search-icon">
@@ -82,42 +76,44 @@
     </header>
     <!--end of header-->
 
-
-
-    <?php 
-
-                $errors = "";
-                if(isset($_POST['submit'])){
-
-                    $fname = $_POST['fname'];
-                    $lname = $_POST['lname'];
-                    $email = $_POST['email'];
-
-                    $qur = "INSERT INTO `order` VALUES(0, '$fname', '$lname', '$email', 'basic');";
-
-                    $result = $conn -> query($qur);
-
-                    if($result === TRUE) {
-                    }else{
-                        $errors =  "Unsuccess";
-                    }
-                }
-            
-                echo $errors;
-            ?>
-
     <!--main-->
-    <div class="form">
-      <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-          <label for="fname">First name:</label><br>
-          <input type="text" id="fname" name="fname"><br>
-          <label for="lname">Last name:</label><br>
-          <input type="text" id="lname" name="lname">
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email">
-          <input class="form-btn" type="submit" name="submit"/>
-        </form>
-    </div>
+    <section class="section-three">
+        <div class="container">
+            <div class="weddings-gallery">
+
+                <?php
+                // Assuming $conn is your database connection
+                include "./db/db.php";
+
+                // Query to retrieve photo paths from the database
+                $query = "SELECT path FROM `file`"; // Assuming your table is named `file`
+                $result = $conn->query($query);
+
+                if ($result->num_rows > 0) {
+                    // Loop through each row in the result set
+                    while ($row = $result->fetch_assoc()) {
+                        $photoPath = $row["path"];
+                        // Display the photo using an <img> tag
+                        // echo "<img src='$photoPath' alt='Photo'>";
+
+                        echo "
+                        <div class='single-img'>
+                            <img src='$photoPath' alt='Wedding Images'>
+                            <div class='single-img-content'>
+                                <h3>Beautiful Weddings</h3>
+                            </div>
+                        </div>
+                        ";
+                    }
+                    } else {
+                    echo "No photos found.";
+                    }
+                ?>
+                
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!--end of main-->
 
@@ -144,6 +140,9 @@
         <p>&copy; Copyright Malcolm Lismore . SIMPLE AND NICE TEMPALTE</p>
     </footer>
     <!--end of footer-->
+
+    <!--lightbox-->
+    <script src="simplelightbox-master/dist/simple-lightbox.js"></script>
 
 
 

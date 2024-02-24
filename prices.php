@@ -31,8 +31,8 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="nature gallery.html">Nature Gallery</a></li>
                     <li><a href="weddings & events gallery.html">Weddings & Events Gallery</a></li>
-                    <li><a href="contact.php">Contact</a></li>
-                    <li><a href="Prices.html" class="active">Prices</a></li>
+                    <li><a href="./contact.php">Contact</a></li>
+                    <li><a href="./Prices.php" class="active">Prices</a></li>
                 </ul>
             </nav>
             <span class="search-icon">
@@ -91,11 +91,8 @@
                     <p><i class="fas fa-check"></i>3 Hovers</p>
                     <p><i class="fas fa-check"></i>Digital Files Included</p>
                 </div>
-                    <!-- <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=basic">Choose plan</a> -->
-                <form method="post" action="form.php">
-                    <input type="hidden" name="data" value="basic">
-                    <button type="submit">Send Data</button>
-                </form>
+                <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=basic">Choose plan</a>
+                
                                     
 
             </div>
