@@ -54,25 +54,24 @@
                 <h2>I'm Malcolm Lismore</h2>
                 <h3>Photograper</h3>
                 <blockquote>
-                    "Photograper is a way of feeling, of touching, of loving. What you have caught on film is captured forever... It 
-                    remember little things, long after you have forgotten everything."
-                    <span>--Aaron Siskind--</span>
+                "To me, photography is an art of observation. It's about finding something interesting in an ordinary place... I've found it has little to do with the things you see and everything to do with the way you see them." 
+                    <span>--Elliott Erwitt--</span>
                 </blockquote>
             </div>
 
             <div class="social-icon">
                 <ul>
                     <li>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
                     </li>
                 </ul>
             </div>
@@ -91,37 +90,37 @@
             </div>
 
             <div class="contact-middle">
-                <div>
-                     <span class="contact-icon">
-                         <i class="fas fa-map-signs"></i>
-                     </span>
-                     <span>Address</span>
-                     <p>Main Street - 2356, California 0043</p>
-                </div>
+                   <div>
+                        <span class="contact-icon">
+                            <i class="fas fa-map-signs"></i>
+                        </span>
+                        <span>Address</span>
+                        <p>Main Street - 2356, California 0043</p>
+                   </div>
 
-                <div>
-                    <span class="contact-icon">
-                         <i class="fas fa-phone"></i>
-                    </span>
-                    <span>Contact Number</span>
-                    <p>2455 0645 2573</p>
-                </div>
+                   <div>
+                       <span class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                       </span>
+                       <span>Contact Number</span>
+                       <p>2455 0645 2573</p>
+                   </div>
 
-               <div>
-                    <span class="contact-icon">
-                         <i class="fas fa-paper-plane"></i>
-                    </span>
-                    <span>Email</span>
-                    <p>malcolmlismore@gmail.com</p>
-                </div>
+                  <div>
+                       <span class="contact-icon">
+                            <i class="fas fa-paper-plane"></i>
+                       </span>
+                       <span>Email</span>
+                       <p>malcolmlismore@gmail.com</p>
+                   </div>
 
-                <div>
-                    <span class="contact-icon">
-                         <i class="fas fa-globe"></i>
-                    </span>
-                    <span>Website</span>
-                    <p>www.malcolmlismorephotography.com</p>
-                </div>
+                   <div>
+                       <span class="contact-icon">
+                           <i class="fas fa-globe"></i>
+                       </span>
+                       <span>Website</span>
+                       <p>www.malcolmlismorephotography.com</p>
+                   </div>
             </div>
 
             <?php 
@@ -164,9 +163,9 @@
                 </div>
                 <!--map-->
                 <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6539399.485787481!2d-129.3826449631014!3d36.84
-                    089164187813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCaliforn
-                    ia%2C%20USA!5e0!3m2!1sen!2slk!4v1708686590693!5m2!1sen!2slk" width="100%" height="600px" style="border:0;"
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4373844.541564852!2d-9.9620817893264!3d57.637160087229745!
+                        2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861e2c403f2a19f%3A0xe7c1fad809c30714!2sScotland%2C%20UK!5e0!3m2!1sen
+                        !2slk!4v1709003576065!5m2!1sen!2slk" width="100%" height="600px" style="border:0;"
                      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>

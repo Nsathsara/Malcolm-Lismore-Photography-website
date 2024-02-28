@@ -48,25 +48,24 @@
                 <h2>I'm Malcolm Lismore</h2>
                 <h3>Photograper</h3>
                 <blockquote>
-                    "Photograper is a way of feeling, of touching, of loving. What you have caught on film is captured forever... It 
-                    remember little things, long after you have forgotten everything."
-                    <span>--Aaron Siskind--</span>
+                "Every viewer is going to get a different thing. That's the thing about painting, photography, cinema."
+                    <span>--David Lynch--</span>
                 </blockquote>
             </div>
 
             <div class="social-icon">
                 <ul>
                     <li>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
                     </li>
                 </ul>
             </div>
@@ -78,17 +77,15 @@
     <!--main-->
 
     <section class="pricing">
-        <h1 class="heading">Pricing</h1>
-        <div class="= box-container">
+        <h1 class="heading">Prices</h1>
+        <div class="box-container">
             <div class="box">
-                <div class="box-2">
-                    <h3>basic plane</h3>
-                </div>
+                <h1>Basic plane</h1>
                 <div class="price">$250/-</div>
                 <div class="list">
                     <p><i class="fas fa-check"></i>photography</p>
                     <p><i class="fas fa-check"></i>1 Location</p>
-                    <p><i class="fas fa-check"></i>3 Hovers</p>
+                    <p><i class="fas fa-check"></i>3 Hours</p>
                     <p><i class="fas fa-check"></i>Digital Files Included</p>
                 </div>
                 <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=basic">Choose plan</a>
@@ -98,24 +95,24 @@
             </div>
 
             <div class="box">
-                <h3>premium plane</h3>
+                <h1>Premium plane</h1>
                 <div class="price">$500/-</div>
                 <div class="list">
                     <p><i class="fas fa-check"></i>photography</p>
                     <p><i class="fas fa-check"></i>3 Location</p>
-                    <p><i class="fas fa-check"></i>6 Hovers</p>
+                    <p><i class="fas fa-check"></i>6 Hours</p>
                     <p><i class="fas fa-check"></i>Digital Files Included</p>
                 </div>
                 <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=premium">Choose plan</a>            
             </div>
 
             <div class="box">
-                <h3>ultimate plane</h3>
+                <h1>Ultimate plane</h1>
                 <div class="price">$750/-</div>
                 <div class="list">
                     <p><i class="fas fa-check"></i>photography</p>
                     <p><i class="fas fa-check"></i>Multiple Location</p>
-                    <p><i class="fas fa-check"></i>9 Hovers</p>
+                    <p><i class="fas fa-check"></i>9 Hours</p>
                     <p><i class="fas fa-check"></i>Digital Files Included</p>
                 </div>
                 <a class="plan-btn" href="http://localhost:8080/mal/form.php?type=ultimate">Choose plan</a>

@@ -49,25 +49,24 @@
                 <h2>I'm Malcolm Lismore</h2>
                 <h3>Photograper</h3>
                 <blockquote>
-                    "Photograper is a way of feeling, of touching, of loving. What you have caught on film is captured forever... It 
-                    remember little things, long after you have forgotten everything."
-                    <span>--Aaron Siskind--</span>
+                "When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence." 
+                    <span>--Ansel Adams--</span>
                 </blockquote>
             </div>
 
             <div class="social-icon">
                 <ul>
                     <li>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest"></i></a>
                     </li>
                 </ul>
             </div>
