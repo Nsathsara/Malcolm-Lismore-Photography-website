@@ -1,9 +1,25 @@
+<?php include "./db/db.php" ?>
+
+<?php 
+
+    session_start();
+
+    if(!isset($_SESSION['admin'])){
+        header("Location: ./login.php");
+        exit();
+    }
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -15,9 +31,11 @@
          if (isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0) {
              $target_dir = "uploads/"; 
              $target_file = $target_dir . basename($_FILES["photo"]["name"]);
-             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION)); 
+             $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+             
+             $type = $_POST['type'];
 
-             $qur = "INSERT INTO `file` VALUES(0, '$target_file');";
+             $qur = "INSERT INTO `file` VALUES(0, '$target_file', '$type');";
 
              $result = $conn -> query($qur);
 
@@ -58,12 +76,30 @@
          }
      }
      ?>
-       <div class="upload-form">
-         <h2>Upload Photo</h2>
-         <form action="upload.php" method="post" enctype="multipart/form-data">
-             <input type="file" name="photo" accept="image/*">
-             <input type="submit" value="Upload">
+       
+       <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Upload photo</h2>
+                
+                 <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="file" class="form-label">Upload photo</label>
+             <input class="form-control" type="file" id="file" name="photo" accept="image/*">
+             
+             </div>
+            <label for="cars">Choose photo type:</label>
+            <select class="form-select" aria-label="Default select example" name="type" id="type">
+                <option value="wedding">Wedding</option>
+                <option value="nature">Nature</option>
+            </select>
+            <br><br>
+             <input class="btn btn-primary" type="submit" value="Upload">
          </form>
-       </div>
+
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

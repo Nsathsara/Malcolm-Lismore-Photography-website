@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="simplelightbox-master/dist/simple-lightbox.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -30,8 +32,8 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="nature gallery.html">Nature Gallery</a></li>
-                    <li><a href="weddings & events gallery.php" class="active">Weddings & Events Gallery</a></li>
+                    <li><a href="nature gallery.html" class="active">Nature Gallery</a></li>
+                    <li><a href="weddings & events gallery.php">Weddings & Events Gallery</a></li>
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="Prices.php">Prices</a></li>
                 </ul>
@@ -49,8 +51,8 @@
                 <h2>I'm Malcolm Lismore</h2>
                 <h3>Photograper</h3>
                 <blockquote>
-                "When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence." 
-                    <span>--Ansel Adams--</span>
+                    "The best thing about a picture is that it never changes, even when the people in it do." 
+                    <span>--Andy Warhol--</span>
                 </blockquote>
             </div>
 
@@ -60,7 +62,7 @@
                         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https:www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -78,7 +80,8 @@
     <!--main-->
     <section class="section-three">
         <div class="container">
-            <div class="weddings-gallery">
+            <div class="nature-gallery">
+                
 
                 <?php
 
@@ -95,15 +98,23 @@
 
                         $type = $row["type"];
 
-                        if($type == "wedding"){
-                                echo "
-                        <div class='single-img'>
-                            <img src='$photoPath' alt='Wedding Images'>
-                            <div class='single-img-content'>
-                                <h3>Beautiful Weddings</h3>
-                            </div>
+                        if($type == "nature"){
+
+                            ?>
+                            
+
+                             <div class="col"> <div class='card mb-4' style='width: 18rem;'>
+                            <img src=<?php echo $photoPath ?> class='card-img-top'>
+                            <div class='card-body'>
+                                <h5 class='card-title'>Description of the image </h5>
+
+                           
                         </div>
-                        ";
+                          </div>
+                        </div>
+
+
+                            <?php
                     }
                     } 
                             
@@ -112,10 +123,9 @@
                     
                 ?>
                 
-                </div>
             </div>
         </div>
-    </section>
+
 
     <!--end of main-->
 
@@ -141,10 +151,12 @@
         </div>
         <p>&copy; Copyright Malcolm Lismore . SIMPLE AND NICE TEMPALTE</p>
     </footer>
+    </section>
     <!--end of footer-->
 
     <!--lightbox-->
     <script src="simplelightbox-master/dist/simple-lightbox.js"></script>
+ 
 
 
 

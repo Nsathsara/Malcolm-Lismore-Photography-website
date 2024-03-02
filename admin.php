@@ -1,3 +1,18 @@
+<?php include "./db/db.php" ?>
+
+<?php 
+
+    session_start();
+
+    if(!isset($_SESSION['admin'])){
+        header("Location: ./login.php");
+        exit();
+    }
+    
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,11 +38,15 @@
 
             </div> 
 
+            <form action="./logout.php" method="post">
+                <button type="submit" class="btn btn-dark p-1 m-3">Log Out</button>
+            </form>
+            
         </div>
 
         <div class="container about">
             <div class="about-content">
-                <div class="about-img flex">
+                <div class="about-img flex img-2">
                     <img src="/Images/about-img.jpg" alt="photograper img">
                 </div>
                 <h2>I'm Malcolm Lismore</h2>
@@ -56,7 +75,7 @@
         <div>
             <div>
 
-            <a href="./upload.php"><button type="button" class="btn btn-primary mx-5 my-5">Add photo for Wedding album</button></a>
+            <a href="./upload.php"><button type="button" class="btn btn-primary mx-5 my-5">Add New Photo</button></a>
 
 
             <div class="container text-center">
@@ -82,24 +101,21 @@
                     ?>
                       <!--html part-->
                       <!--boostrap -->        
-                        <div class="col"> <div class='card' style='width: 18rem;'></div>
+                        <div class="col"> <div class='card mb-3' style='width: 18rem;'>
                             <img src=<?php echo $photoPath ?> class='card-img-top'>
                             <div class='card-body'>
-                                <h5 class='card-title'>Wedding Images</h5>
 
                                 <form action='delete_photo.php' method='post'>
                                     <input type='hidden' name='photo_id' value=<?php echo $photoId ?>>
-                                    <input class='btn btn-primary' type='submit' name='delete' value='Delete'>
+                                    <input class='btn btn-primary m-1 mb-2' type='submit' name='delete' value='Delete'>
                                 </form>
                            
                         </div>
-                          
+                          </div>
                         </div>
 
                     <?php
                     }
-                    } else {
-                    echo "No photos found.";
                     }
                 ?>
 
@@ -113,9 +129,6 @@
 
         <div>
             <div>
-
-            <a href="./upload.php"><button type="button" class="btn btn-primary mx-5 my-5">Add photo for Wedding album</button></a>
-
 
             <div class="container text-center">
             <div class="row row-cols-4"> <!--boostrap-->
@@ -156,9 +169,7 @@
 
                     <?php
                     }
-                    } else {
-                    echo "No photos found.";
-                    }
+                    } 
                 ?>
 
                     </div>
